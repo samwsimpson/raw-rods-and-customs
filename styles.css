@@ -4,9 +4,9 @@
    ======================================== */
 
 :root {
-    --primary-red: #7a1a1a;
-    --dark-red: #5c1515;
-    --hot-orange: #b33000;
+    --primary-red: #a52a2a;
+    --dark-red: #7a1a1a;
+    --hot-orange: #d94f00;
     --chrome-silver: #c0c0c0;
     --dark-gray: #1a1a1a;
     --medium-gray: #2d2d2d;
@@ -204,14 +204,14 @@ body {
 
 .card h3 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--chrome-silver);
     margin-bottom: 1.5rem;
     letter-spacing: 2px;
 }
 
 .card h4 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: var(--primary-red);
     margin-bottom: 1rem;
     font-weight: 600;
@@ -372,6 +372,7 @@ body {
 .stream h4 {
     color: var(--hot-orange);
     margin-bottom: 0.75rem;
+    font-size: 1.6rem;
 }
 
 /* ========================================
