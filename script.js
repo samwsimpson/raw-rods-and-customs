@@ -521,9 +521,163 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ========================================
+    // STICKY NAVIGATION
+    // ========================================
+    const nav = document.getElementById('stickyNav');
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    // Mobile menu toggle
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+
+    // ========================================
+    // BACK TO TOP BUTTON
+    // ========================================
+    const backToTop = document.getElementById('backToTop');
+    
+    if (backToTop) {
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // ========================================
+    // PDF DOWNLOAD
+    // ========================================
+    const pdfDownloadBtn = document.getElementById('pdfDownload');
+    
+    if (pdfDownloadBtn) {
+        pdfDownloadBtn.addEventListener('click', () => {
+            // Hide elements that shouldn't be in PDF
+            const nav = document.querySelector('.sticky-nav');
+            const backToTop = document.querySelector('.back-to-top');
+            const contactForm = document.querySelector('.contact-form');
+            
+            nav.style.display = 'none';
+            backToTop.style.display = 'none';
+            if (contactForm) contactForm.style.display = 'none';
+            
+            // Generate PDF
+            const element = document.body;
+            const opt = {
+                margin: 0.5,
+                filename: 'Raw-Rods-Customs-Business-Plan.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+            
+            html2pdf().set(opt).from(element).save().then(() => {
+                // Restore hidden elements
+                nav.style.display = 'block';
+                backToTop.style.display = 'block';
+                if (contactForm) contactForm.style.display = 'grid';
+            });
+        });
+    }
+
+    // ========================================
+    // CONTACT FORM HANDLING
+    // ========================================
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                interest: document.getElementById('interest').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Simulate form submission (replace with actual backend call)
+            formStatus.textContent = 'Sending message...';
+            formStatus.className = 'form-status';
+            formStatus.style.display = 'block';
+            
+            setTimeout(() => {
+                // Success simulation
+                formStatus.textContent = '✓ Message sent successfully! We\'ll get back to you within 24 hours.';
+                formStatus.className = 'form-status success';
+                contactForm.reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    formStatus.style.display = 'none';
+                }, 5000);
+                
+                // In production, replace with actual fetch/AJAX call:
+                /*
+                fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    formStatus.textContent = '✓ Message sent successfully!';
+                    formStatus.className = 'form-status success';
+                    contactForm.reset();
+                })
+                .catch(error => {
+                    formStatus.textContent = '✗ Error sending message. Please try again.';
+                    formStatus.className = 'form-status error';
+                });
+                */
+            }, 1000);
+        });
+    }
+
+    // ========================================
+    // SMOOTH SCROLL FOR NAVIGATION
+    // ========================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const navHeight = document.querySelector('.sticky-nav').offsetHeight;
+                const targetPosition = target.offsetTop - navHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // ========================================
     // CONSOLE BRANDING
     // ========================================
-    console.log('%c🏁 RAW RODS & CUSTOMS', 'color: #c41e3a; font-size: 24px; font-weight: bold;');
+    console.log('%c🏁 RAW RODS & CUSTOMS', 'color: #a52a2a; font-size: 24px; font-weight: bold;');
     console.log('%cTexas-Built Performance. Turnkey Power. Your Vision.', 'color: #ffd700; font-size: 14px;');
     console.log('%cBusiness Plan Loaded Successfully', 'color: #32cd32; font-size: 12px;');
 });

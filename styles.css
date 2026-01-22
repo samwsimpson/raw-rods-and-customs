@@ -29,6 +29,124 @@ body {
     color: var(--off-white);
     line-height: 1.6;
     overflow-x: hidden;
+    padding-top: 70px; /* Account for sticky nav */
+}
+
+/* ========================================
+   STICKY NAVIGATION
+   ======================================== */
+
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(26, 26, 26, 0.98);
+    border-bottom: 3px solid var(--primary-red);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.75rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: var(--primary-red);
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--chrome-silver);
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    color: var(--chrome-silver);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-menu li a:hover {
+    color: var(--primary-red);
+}
+
+.pdf-download-btn {
+    background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.pdf-download-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(165, 42, 42, 0.4);
+}
+
+/* ========================================
+   BACK TO TOP BUTTON
+   ======================================== */
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
+    color: var(--white);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(165, 42, 42, 0.5);
 }
 
 /* ========================================
@@ -169,6 +287,13 @@ body {
     margin-bottom: 2rem;
     position: relative;
     padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-icon {
+    font-size: 3rem;
 }
 
 .section-title::after {
@@ -890,6 +1015,14 @@ footer p {
     body {
         background: white;
         color: black;
+        padding-top: 0;
+    }
+
+    .sticky-nav,
+    .back-to-top,
+    .pdf-download-btn,
+    .contact-form {
+        display: none !important;
     }
 
     .hero {
@@ -907,4 +1040,367 @@ footer p {
     .chart-container {
         page-break-inside: avoid;
     }
+    
+    .section {
+        page-break-inside: avoid;
+    }
 }
+
+/* ========================================
+   COMPARISON TABLE
+   ======================================== */
+
+.comparison-table {
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 1.25rem;
+    text-align: center;
+    border: 1px solid var(--light-gray);
+}
+
+.comparison-table th {
+    background: var(--dark-gray);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+}
+
+.comparison-table .us-column {
+    background: rgba(165, 42, 42, 0.2);
+    color: var(--gold);
+}
+
+.comparison-table .highlight-cell {
+    background: rgba(165, 42, 42, 0.15);
+    font-weight: 600;
+    color: var(--gold);
+}
+
+.comparison-table .value-row {
+    background: var(--light-gray);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* ========================================
+   SENSITIVITY ANALYSIS
+   ======================================== */
+
+.sensitivity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.scenario-card {
+    background: var(--dark-gray);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid var(--light-gray);
+}
+
+.scenario-card.best-case {
+    border-color: #32cd32;
+}
+
+.scenario-card.best-case h4 {
+    color: #32cd32;
+}
+
+.scenario-card.base-case {
+    border-color: var(--gold);
+}
+
+.scenario-card.base-case h4 {
+    color: var(--gold);
+}
+
+.scenario-card.worst-case {
+    border-color: var(--hot-orange);
+}
+
+.scenario-card.worst-case h4 {
+    color: var(--hot-orange);
+}
+
+.scenario-subtitle {
+    font-size: 0.95rem;
+    color: var(--chrome-silver);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.scenario-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.scenario-card li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.profit-highlight {
+    color: var(--gold);
+    font-size: 1.2rem;
+}
+
+.sensitivity-note {
+    background: rgba(165, 42, 42, 0.1);
+    border-left: 4px solid var(--primary-red);
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+}
+
+/* ========================================
+   TESTIMONIALS
+   ======================================== */
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.testimonial-card {
+    background: var(--dark-gray);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--gold);
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+}
+
+.testimonial-stars {
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-text {
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--off-white);
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.testimonial-author strong {
+    color: var(--primary-red);
+    font-size: 1.1rem;
+}
+
+.testimonial-author span {
+    color: var(--chrome-silver);
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   FAQ SECTION
+   ======================================== */
+
+.faq-container {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.faq-item {
+    background: var(--dark-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-red);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-left-width: 8px;
+    transform: translateX(5px);
+}
+
+.faq-question {
+    color: var(--primary-red);
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+}
+
+.faq-answer {
+    line-height: 1.8;
+    color: var(--off-white);
+}
+
+/* ========================================
+   CONTACT FORM
+   ======================================== */
+
+.contact-card {
+    background: var(--medium-gray);
+}
+
+.contact-info {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-item strong {
+    color: var(--primary-red);
+    font-size: 1.1rem;
+}
+
+.contact-item a {
+    color: var(--hot-orange);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: var(--gold);
+}
+
+.contact-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--chrome-silver);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background: var(--dark-gray);
+    border: 2px solid var(--light-gray);
+    color: var(--off-white);
+    padding: 0.75rem;
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-red);
+    box-shadow: 0 0 10px rgba(165, 42, 42, 0.3);
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
+    color: var(--white);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(165, 42, 42, 0.5);
+}
+
+.form-status {
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    display: none;
+}
+
+.form-status.success {
+    background: rgba(50, 205, 50, 0.2);
+    border: 2px solid #32cd32;
+    color: #32cd32;
+    display: block;
+}
+
+.form-status.error {
+    background: rgba(255, 69, 0, 0.2);
+    border: 2px solid var(--hot-orange);
+    color: var(--hot-orange);
+    display: block;
+}
+
+/* ========================================
+   RESPONSIVE NAVIGATION
+   ======================================== */
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(26, 26, 26, 0.98);
+        flex-direction: column;
+        padding: 1rem 0;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-menu.active {
+        max-height: 500px;
+        border-bottom: 2px solid var(--primary-red);
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        border-bottom: 1px solid var(--light-gray);
+    }
+
+    .pdf-download-btn {
+        width: 90%;
+        margin: 1rem auto;
+    }
