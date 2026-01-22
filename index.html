@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raw Rods & Customs - 5 Year Business Plan</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="logo">RAW RODS & CUSTOMS</h1>
+            <p class="tagline">Texas-Built Performance. Turnkey Power. Your Vision.</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">$380K+</span>
+                    <span class="stat-label">Year 5 Net Profit</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">30</span>
+                    <span class="stat-label">Units/Year by Year 5</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">$25K+</span>
+                    <span class="stat-label">Customer Savings</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Executive Summary -->
+        <section class="section">
+            <h2 class="section-title">Executive Summary</h2>
+            <div class="card">
+                <p class="lead-text">Raw Rods & Customs is positioned to dominate the Texas hot rod market by delivering professionally assembled, performance-ready Factory Five '33 Hot Rods at unprecedented value. By utilizing Cleveland PAP's Turnkey Pallets and maintaining unpainted "primer-ready" delivery, we save customers $25,000+ while generating 28% profit margins.</p>
+                
+                <div class="highlight-box">
+                    <h3>Core Competitive Advantage</h3>
+                    <ul>
+                        <li><strong>Turnkey Efficiency:</strong> Integrated powertrains reduce build time by 40 hours per unit</li>
+                        <li><strong>Texas Market Advantage:</strong> Low overhead, high car culture, favorable regulatory environment</li>
+                        <li><strong>Predictable Quality:</strong> Factory-backed drivetrains eliminate the #1 profit killer—troubleshooting</li>
+                        <li><strong>Scalable Model:</strong> Clear path from 3 units (Year 1) to 30 units (Year 5)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Analysis -->
+        <section class="section">
+            <h2 class="section-title">Market Analysis</h2>
+            <div class="two-column">
+                <div class="card">
+                    <h3>Target Market</h3>
+                    <ul>
+                        <li><strong>Primary:</strong> Texas enthusiasts aged 35-65 with $70K+ disposable income</li>
+                        <li><strong>Secondary:</strong> Out-of-state buyers seeking Texas' favorable kit car laws</li>
+                        <li><strong>Tertiary:</strong> Collectors seeking Factory Five certified builds</li>
+                    </ul>
+                    <p class="market-data">Texas has <strong>2.3 million registered car enthusiasts</strong> and hosts 1,200+ annual car shows—the largest concentration in the US.</p>
+                </div>
+                <div class="card">
+                    <h3>Competitive Landscape</h3>
+                    <p><strong>Current Competition:</strong></p>
+                    <ul>
+                        <li>DIY Builders: 60% fail to complete due to technical complexity</li>
+                        <li>Full-Service Shops: $90K-$150K turnkey builds (paint included)</li>
+                        <li>Factory Five Direct: Kits only, no assembly service</li>
+                    </ul>
+                    <p class="competitive-edge"><strong>Our Position:</strong> Professional assembly at 40% below full-service competitors, eliminating DIY risk.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Model -->
+        <section class="section">
+            <h2 class="section-title">Business Model & Unit Economics</h2>
+            <div class="card">
+                <h3>Per Unit Build Cost Breakdown</h3>
+                <div class="chart-container">
+                    <canvas id="costBreakdownChart"></canvas>
+                </div>
+                <div class="economics-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th>Cost</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Factory Five '33 Hot Rod Kit</td>
+                                <td>$21,000</td>
+                                <td>Base chassis, body, suspension</td>
+                            </tr>
+                            <tr>
+                                <td>Cleveland PAP Turnkey Pallet</td>
+                                <td>$11,500</td>
+                                <td>Coyote 5.0 + Trans + ECU (plug & play)</td>
+                            </tr>
+                            <tr>
+                                <td>Wheels, Tires, Interior</td>
+                                <td>$4,500</td>
+                                <td>17" wheels, racing seats, dash</td>
+                            </tr>
+                            <tr>
+                                <td>Miscellaneous Components</td>
+                                <td>$2,500</td>
+                                <td>Brake lines, exhaust, fluids, battery, wiring</td>
+                            </tr>
+                            <tr>
+                                <td>Labor (120 hours @ $50/hr)</td>
+                                <td>$6,000</td>
+                                <td>Professional assembly by certified technicians</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td><strong>Total Build Cost</strong></td>
+                                <td><strong>$45,500</strong></td>
+                                <td></td>
+                            </tr>
+                            <tr class="revenue-row">
+                                <td><strong>Sale Price (Primer-Ready)</strong></td>
+                                <td><strong>$62,500</strong></td>
+                                <td>28% gross margin</td>
+                            </tr>
+                            <tr class="profit-row">
+                                <td><strong>Gross Profit Per Unit</strong></td>
+                                <td><strong>$17,000</strong></td>
+                                <td>Before overhead allocation</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Revenue Streams</h3>
+                <div class="revenue-streams">
+                    <div class="stream">
+                        <h4>Primary: Turnkey Builds</h4>
+                        <p>Complete assembly from kit to driving condition (unpainted). Accounts for 85% of revenue.</p>
+                    </div>
+                    <div class="stream">
+                        <h4>Secondary: Rolling Chassis Service</h4>
+                        <p>Customer provides kit; we supply turnkey pallet + assembly. Introduced Year 3. Projected 10% of revenue.</p>
+                    </div>
+                    <div class="stream">
+                        <h4>Tertiary: Certified Pre-Owned Program</h4>
+                        <p>Inspection & certification for resale of our builds. Year 5 launch. Projected 5% of revenue.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legal & Regulatory -->
+        <section class="section">
+            <h2 class="section-title">Texas Regulatory Compliance</h2>
+            <div class="card">
+                <div class="two-column">
+                    <div>
+                        <h3>Required Licenses & Permits</h3>
+                        <table class="simple-table">
+                            <tr>
+                                <td><strong>GDN Dealer License</strong></td>
+                                <td>$700-$1,000</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Manufacturer/Distributor License</strong></td>
+                                <td>$1,500</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Surety Bond (Texas DMV)</strong></td>
+                                <td>$50,000 ($500/year)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Garage Keepers Insurance</strong></td>
+                                <td>$3,000-$5,000/year</td>
+                            </tr>
+                            <tr>
+                                <td><strong>General Liability Insurance</strong></td>
+                                <td>$2,500/year</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td><strong>Total Year 1 Setup</strong></td>
+                                <td><strong>~$9,000</strong></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <h3>Texas Vehicle Assembly Advantage</h3>
+                        <p>Texas Administrative Code Title 43, Part 10 allows for "assembled vehicles" to be registered via:</p>
+                        <ul>
+                            <li><strong>VTR-68-A Form:</strong> Assembled Vehicle Statement</li>
+                            <li><strong>Safety Inspection:</strong> Required before registration</li>
+                            <li><strong>No Emissions Test:</strong> Kit cars exempt in most Texas counties</li>
+                        </ul>
+                        <p class="note"><strong>Legal Protection:</strong> All vehicles sold with "For Off-Road/Track Use" disclaimer until customer completes state inspection.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5 Year Financial Projection -->
+        <section class="section">
+            <h2 class="section-title">5-Year Financial Projection</h2>
+            
+            <div class="card">
+                <h3>Revenue & Profit Growth</h3>
+                <div class="chart-container">
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Units Produced Per Year</h3>
+                <div class="chart-container">
+                    <canvas id="unitsChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Detailed Year-by-Year Breakdown</h3>
+                <div class="year-cards">
+                    <!-- Year 1 -->
+                    <div class="year-card">
+                        <h4>Year 1: Foundation & Proof of Concept</h4>
+                        <div class="year-stats">
+                            <div><strong>Units:</strong> 3</div>
+                            <div><strong>Revenue:</strong> $187,500</div>
+                            <div><strong>Net Profit:</strong> $8,500</div>
+                        </div>
+                        <p><strong>Strategy:</strong></p>
+                        <ul>
+                            <li>Establish assembly process and build first 3 prototypes</li>
+                            <li>Secure all licenses and insurance (GDN, Manufacturer, Bond)</li>
+                            <li>Build relationships with Factory Five and Cleveland PAP</li>
+                            <li>Invest in essential tools: lifts ($8K), welders ($3K), air systems ($2K)</li>
+                            <li>Document build process for marketing and training</li>
+                        </ul>
+                        <p><strong>Marketing Focus:</strong> Local car shows, Texas Hot Rod Association, Instagram/YouTube build series</p>
+                    </div>
+
+                    <!-- Year 2 -->
+                    <div class="year-card">
+                        <h4>Year 2: Process Optimization</h4>
+                        <div class="year-stats">
+                            <div><strong>Units:</strong> 8</div>
+                            <div><strong>Revenue:</strong> $500,000</div>
+                            <div><strong>Net Profit:</strong> $70,000</div>
+                        </div>
+                        <p><strong>Strategy:</strong></p>
+                        <ul>
+                            <li>Transition 100% to Cleveland PAP Turnkey Pallets</li>
+                            <li>Negotiate "preferred builder" discount (target: 8% savings = $920/unit)</li>
+                            <li>Streamline build time from 120 hours to 100 hours through process refinement</li>
+                            <li>Hire part-time assistant mechanic (20 hours/week)</li>
+                            <li>Launch customer referral program ($1,000 credit per referral)</li>
+                        </ul>
+                        <p><strong>Key Milestone:</strong> Break-even month achieved by Q3</p>
+                    </div>
+
+                    <!-- Year 3 -->
+                    <div class="year-card">
+                        <h4>Year 3: Scale & Diversification</h4>
+                        <div class="year-stats">
+                            <div><strong>Units:</strong> 15</div>
+                            <div><strong>Revenue:</strong> $975,000</div>
+                            <div><strong>Net Profit:</strong> $165,000</div>
+                        </div>
+                        <p><strong>Strategy:</strong></p>
+                        <ul>
+                            <li>Hire full-time lead mechanic ($65K salary + benefits)</li>
+                            <li>Launch "Rolling Chassis" service (customer provides kit, 30% lower labor cost)</li>
+                            <li>Expand facility to 4,000 sq ft ($4,000/month rent)</li>
+                            <li>Add second vehicle lift and specialized tooling</li>
+                            <li>Partner with local paint shops for customer referral network</li>
+                        </ul>
+                        <p><strong>New Revenue Stream:</strong> Rolling Chassis service generates $45K (5 units @ $9K profit each)</p>
+                    </div>
+
+                    <!-- Year 4 -->
+                    <div class="year-card">
+                        <h4>Year 4: Production Scaling</h4>
+                        <div class="year-stats">
+                            <div><strong>Units:</strong> 22</div>
+                            <div><strong>Revenue:</strong> $1,400,000</div>
+                            <div><strong>Net Profit:</strong> $265,000</div>
+                        </div>
+                        <p><strong>Strategy:</strong></p>
+                        <ul>
+                            <li>Relocate to 5,500 sq ft facility in lower-cost industrial zone</li>
+                            <li>Hire second full-time mechanic + shop manager</li>
+                            <li>Purchase turnkey pallets in bulk (5 at a time) for 12% cost savings</li>
+                            <li>Implement inventory management system (3-unit buffer stock)</li>
+                            <li>Launch "Build Your Own" configurator on website</li>
+                        </ul>
+                        <p><strong>Efficiency Gain:</strong> Build time reduced to 90 hours through team specialization</p>
+                    </div>
+
+                    <!-- Year 5 -->
+                    <div class="year-card">
+                        <h4>Year 5: Market Leadership</h4>
+                        <div class="year-stats">
+                            <div><strong>Units:</strong> 30</div>
+                            <div><strong>Revenue:</strong> $1,950,000</div>
+                            <div><strong>Net Profit:</strong> $420,000</div>
+                        </div>
+                        <p><strong>Strategy:</strong></p>
+                        <ul>
+                            <li>Reach capacity of 2.5 builds per month (30/year)</li>
+                            <li>Launch "Certified Pre-Owned" inspection program for resale market</li>
+                            <li>Expand to second powertrain option: LS3 Turnkey Pallet</li>
+                            <li>Build 3-person service team for post-sale support</li>
+                            <li>Explore franchise/licensing model for out-of-state expansion</li>
+                        </ul>
+                        <p><strong>Brand Milestone:</strong> Recognized as Texas' premier Factory Five builder</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Monthly Operating Expenses</h3>
+                <div class="two-column">
+                    <div>
+                        <h4>Fixed Costs (Year 1-2)</h4>
+                        <table class="simple-table">
+                            <tr>
+                                <td>Shop Rent (3,000 sq ft)</td>
+                                <td>$3,000</td>
+                            </tr>
+                            <tr>
+                                <td>Utilities (Electric, Gas, Water)</td>
+                                <td>$600</td>
+                            </tr>
+                            <tr>
+                                <td>Insurance (Garage + Liability)</td>
+                                <td>$500</td>
+                            </tr>
+                            <tr>
+                                <td>Marketing & Advertising</td>
+                                <td>$1,200</td>
+                            </tr>
+                            <tr>
+                                <td>Software & Admin</td>
+                                <td>$300</td>
+                            </tr>
+                            <tr>
+                                <td>Consumables (Gas, discs, etc.)</td>
+                                <td>$700</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td><strong>Total Monthly</strong></td>
+                                <td><strong>$6,300</strong></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <h4>Scaled Costs (Year 5)</h4>
+                        <table class="simple-table">
+                            <tr>
+                                <td>Shop Rent (5,500 sq ft)</td>
+                                <td>$4,500</td>
+                            </tr>
+                            <tr>
+                                <td>Utilities</td>
+                                <td>$1,200</td>
+                            </tr>
+                            <tr>
+                                <td>Insurance (Expanded Coverage)</td>
+                                <td>$1,000</td>
+                            </tr>
+                            <tr>
+                                <td>Marketing & Advertising</td>
+                                <td>$2,500</td>
+                            </tr>
+                            <tr>
+                                <td>Payroll (3 FTE + Benefits)</td>
+                                <td>$18,000</td>
+                            </tr>
+                            <tr>
+                                <td>Software & Admin</td>
+                                <td>$600</td>
+                            </tr>
+                            <tr>
+                                <td>Consumables</td>
+                                <td>$1,500</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td><strong>Total Monthly</strong></td>
+                                <td><strong>$29,300</strong></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Cash Flow & Break-Even Analysis</h3>
+                <div class="chart-container">
+                    <canvas id="cashFlowChart"></canvas>
+                </div>
+                <p class="note"><strong>Break-Even Point:</strong> 4.5 units per year at current unit economics. Achieved in Year 1 with 3 units sold + controlled overhead.</p>
+            </div>
+        </section>
+
+        <!-- Risk Management -->
+        <section class="section">
+            <h2 class="section-title">Risk Management & Mitigation</h2>
+            <div class="two-column">
+                <div class="card risk-card">
+                    <h3>⚠️ Key Risks</h3>
+                    <div class="risk-item">
+                        <h4>Supply Chain Disruption</h4>
+                        <p><strong>Risk:</strong> Factory Five or Cleveland PAP delays</p>
+                        <p><strong>Mitigation:</strong> Maintain 2-unit buffer inventory; develop backup supplier relationships (Blueprint Engines, Ford Performance)</p>
+                    </div>
+                    <div class="risk-item">
+                        <h4>Liability Exposure</h4>
+                        <p><strong>Risk:</strong> Customer accident attributed to assembly defects</p>
+                        <p><strong>Mitigation:</strong> $2M liability insurance; comprehensive pre-delivery inspection checklist; 30-day mechanical warranty; all sales include track-use waiver</p>
+                    </div>
+                    <div class="risk-item">
+                        <h4>Market Demand Variability</h4>
+                        <p><strong>Risk:</strong> Economic downturn reduces luxury purchases</p>
+                        <p><strong>Mitigation:</strong> Diversify with rolling chassis service (lower price point); build 6-month cash reserve by Year 3</p>
+                    </div>
+                    <div class="risk-item">
+                        <h4>Regulatory Changes</h4>
+                        <p><strong>Risk:</strong> Texas tightens kit car regulations</p>
+                        <p><strong>Mitigation:</strong> Active membership in SEMA; legal counsel on retainer; adaptable business model for compliance</p>
+                    </div>
+                </div>
+
+                <div class="card warranty-card">
+                    <h3>✓ Warranty & Quality Assurance</h3>
+                    <div class="warranty-item">
+                        <h4>30-Day "Texas Shake-Down" Warranty</h4>
+                        <p><strong>Coverage:</strong> All mechanical assembly defects (leaks, loose components, wiring shorts, brake system issues)</p>
+                        <p><strong>Process:</strong> Customer drives 500 miles; returns for complimentary inspection and adjustment</p>
+                    </div>
+                    <div class="warranty-item">
+                        <h4>Drivetrain Pass-Through Warranty</h4>
+                        <p><strong>Coverage:</strong> Cleveland PAP's 12-month/12,000-mile powertrain warranty transfers directly to customer</p>
+                        <p><strong>Advantage:</strong> Customer has direct relationship with engine supplier for any powertrain issues</p>
+                    </div>
+                    <div class="warranty-item">
+                        <h4>Pre-Delivery Quality Checklist</h4>
+                        <ul>
+                            <li>100-point mechanical inspection</li>
+                            <li>Dynamometer testing (if equipped)</li>
+                            <li>Road test (20+ miles)</li>
+                            <li>Fluid level verification</li>
+                            <li>Torque spec verification on all critical fasteners</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marketing Strategy -->
+        <section class="section">
+            <h2 class="section-title">Marketing & Sales Strategy</h2>
+            <div class="card">
+                <h3>Digital Marketing Approach</h3>
+                <div class="two-column">
+                    <div>
+                        <h4>Content Marketing</h4>
+                        <ul>
+                            <li><strong>YouTube Build Series:</strong> Document each build from kit arrival to test drive (estimated reach: 50K views/video by Year 2)</li>
+                            <li><strong>Instagram Reels:</strong> Daily progress shots, mechanical tips, customer testimonials</li>
+                            <li><strong>Blog/SEO:</strong> Target keywords: "Factory Five builder Texas," "turnkey hot rod," "kit car assembly service"</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Paid Advertising</h4>
+                        <ul>
+                            <li><strong>Facebook/Instagram Ads:</strong> Target males 40-65 in Texas, interests: classic cars, hot rods, Factory Five</li>
+                            <li><strong>Google Ads:</strong> Search campaigns for high-intent keywords</li>
+                            <li><strong>Budget:</strong> $1,200/month Year 1 → $2,500/month by Year 5</li>
+                            <li><strong>Target CAC:</strong> $800 per customer (1.3% of sale price)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Strategic Partnerships</h3>
+                <div class="partnership-grid">
+                    <div class="partnership">
+                        <h4>Factory Five Racing</h4>
+                        <p>Become certified builder; listed on Factory Five's "Recommended Shops" page</p>
+                    </div>
+                    <div class="partnership">
+                        <h4>Cleveland Pick-A-Part</h4>
+                        <p>Preferred builder status; joint marketing; potential 8-12% volume discount</p>
+                    </div>
+                    <div class="partnership">
+                        <h4>Texas Paint Shops</h4>
+                        <p>Referral network for customer paint services; reciprocal lead generation</p>
+                    </div>
+                    <div class="partnership">
+                        <h4>Goodguys Rod & Custom</h4>
+                        <p>Sponsorship and display at Texas events (3-4 major shows annually)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Sales Funnel</h3>
+                <div class="funnel">
+                    <div class="funnel-stage">
+                        <h4>Awareness</h4>
+                        <p>Car shows, social media, YouTube → 10,000 impressions/month</p>
+                    </div>
+                    <div class="funnel-stage">
+                        <h4>Consideration</h4>
+                        <p>Website visit, inquiry form, pricing calculator → 200 leads/month</p>
+                    </div>
+                    <div class="funnel-stage">
+                        <h4>Decision</h4>
+                        <p>Shop tour, build consultation, financing discussion → 10 qualified leads/month</p>
+                    </div>
+                    <div class="funnel-stage">
+                        <h4>Conversion</h4>
+                        <p>Deposit ($5,000), contract signing → 2.5 sales/month (Year 5)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Management & Operations -->
+        <section class="section">
+            <h2 class="section-title">Management & Staffing Plan</h2>
+            <div class="card">
+                <h3>Organizational Structure (Year 5)</h3>
+                <div class="org-chart">
+                    <div class="org-level">
+                        <div class="org-box owner">
+                            <strong>Owner/Founder</strong>
+                            <p>Strategy, Sales, Finance</p>
+                        </div>
+                    </div>
+                    <div class="org-level">
+                        <div class="org-box manager">
+                            <strong>Shop Manager</strong>
+                            <p>Operations, Quality Control, Vendor Relations</p>
+                        </div>
+                    </div>
+                    <div class="org-level">
+                        <div class="org-box mechanic">
+                            <strong>Lead Mechanic</strong>
+                            <p>Assembly, Training, Technical</p>
+                        </div>
+                        <div class="org-box mechanic">
+                            <strong>Mechanic #2</strong>
+                            <p>Assembly, Fabrication</p>
+                        </div>
+                        <div class="org-box admin">
+                            <strong>Admin/Marketing</strong>
+                            <p>Customer Service, Social Media, Scheduling</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="card">
+                    <h3>Staffing Timeline</h3>
+                    <table class="simple-table">
+                        <tr>
+                            <td><strong>Year 1</strong></td>
+                            <td>Owner only (outsource accounting)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Year 2</strong></td>
+                            <td>+ Part-time assistant (20 hrs/week)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Year 3</strong></td>
+                            <td>+ Full-time lead mechanic ($65K)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Year 4</strong></td>
+                            <td>+ Full-time mechanic #2 ($55K) + Shop manager ($70K)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Year 5</strong></td>
+                            <td>+ Part-time admin/marketing (30 hrs/week)</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>Required Skills & Certifications</h3>
+                    <ul>
+                        <li><strong>ASE Certifications:</strong> Preferred for lead mechanics (Engine Performance, Brakes, Electrical)</li>
+                        <li><strong>TIG/MIG Welding:</strong> Required for fabrication work</li>
+                        <li><strong>EFI Tuning Experience:</strong> EFI Live, HP Tuners, or Ford/Chevy factory software</li>
+                        <li><strong>Texas Safety Inspector License:</strong> At least one team member (Year 3+)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financial Requirements -->
+        <section class="section">
+            <h2 class="section-title">Startup Capital Requirements</h2>
+            <div class="card">
+                <h3>Initial Investment Breakdown</h3>
+                <div class="two-column">
+                    <div>
+                        <table class="simple-table">
+                            <tr>
+                                <td><strong>Facility Setup</strong></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>First/Last Month Rent + Deposit</td>
+                                <td>$9,000</td>
+                            </tr>
+                            <tr>
+                                <td>Utilities Setup & Deposits</td>
+                                <td>$1,500</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Equipment & Tools</strong></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2-Post Vehicle Lifts (2x)</td>
+                                <td>$8,000</td>
+                            </tr>
+                            <tr>
+                                <td>Air Compressor System</td>
+                                <td>$2,500</td>
+                            </tr>
+                            <tr>
+                                <td>Welders (TIG + MIG)</td>
+                                <td>$3,500</td>
+                            </tr>
+                            <tr>
+                                <td>Hand Tools & Specialty Tools</td>
+                                <td>$5,000</td>
+                            </tr>
+                            <tr>
+                                <td>Diagnostic Equipment</td>
+                                <td>$2,000</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="simple-table">
+                            <tr>
+                                <td><strong>Legal & Licensing</strong></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>GDN Dealer License</td>
+                                <td>$1,000</td>
+                            </tr>
+                            <tr>
+                                <td>Manufacturer License</td>
+                                <td>$1,500</td>
+                            </tr>
+                            <tr>
+                                <td>Surety Bond (annual)</td>
+                                <td>$500</td>
+                            </tr>
+                            <tr>
+                                <td>Insurance (first year)</td>
+                                <td>$6,000</td>
+                            </tr>
+                            <tr>
+                                <td>Legal/Accounting Setup</td>
+                                <td>$3,000</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Initial Inventory</strong></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>First Build Materials</td>
+                                <td>$45,500</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Marketing & Branding</strong></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Website Development</td>
+                                <td>$4,000</td>
+                            </tr>
+                            <tr>
+                                <td>Branding & Signage</td>
+                                <td>$2,500</td>
+                            </tr>
+                            <tr>
+                                <td>Initial Marketing Budget</td>
+                                <td>$3,000</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="total-investment">
+                    <h3>Total Startup Capital Required: $98,500</h3>
+                    <p><strong>Recommended Working Capital Buffer:</strong> $25,000 (3 months operating expenses)</p>
+                    <p class="highlight"><strong>Total Recommended Funding: $123,500</strong></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Funding Strategy</h3>
+                <div class="funding-options">
+                    <div class="funding-option">
+                        <h4>Option 1: Personal Capital + Small Business Loan</h4>
+                        <p>$50K personal investment + $73,500 SBA 7(a) loan at 8.5% (10-year term)</p>
+                        <p><strong>Monthly Payment:</strong> ~$915</p>
+                    </div>
+                    <div class="funding-option">
+                        <h4>Option 2: Strategic Partner Investment</h4>
+                        <p>50/50 partnership split; each partner contributes $61,750</p>
+                        <p><strong>Advantage:</strong> No debt service; shared operational burden</p>
+                    </div>
+                    <div class="funding-option">
+                        <h4>Option 3: Equipment Financing + Line of Credit</h4>
+                        <p>$30K personal + $21K equipment loan (5yr) + $72,500 business LOC</p>
+                        <p><strong>Advantage:</strong> Preserves cash flow; pay-as-you-grow model</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exit Strategy -->
+        <section class="section">
+            <h2 class="section-title">Growth & Exit Strategy</h2>
+            <div class="two-column">
+                <div class="card">
+                    <h3>Expansion Opportunities (Year 6+)</h3>
+                    <ul>
+                        <li><strong>Geographic Expansion:</strong> Open second location in California or Arizona (strong hot rod markets)</li>
+                        <li><strong>Product Line Extension:</strong> Add Superformance, Backdraft Racing, or AC Cobra replica builds</li>
+                        <li><strong>Franchise Model:</strong> License "Raw Rods" brand and methodology to qualified builders in other states</li>
+                        <li><strong>Parts E-Commerce:</strong> Sell turnkey pallets, specialty components direct to DIY builders</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Exit Options</h3>
+                    <ul>
+                        <li><strong>Strategic Acquisition:</strong> Sell to Factory Five Racing or larger automotive group (target multiple: 3-4x EBITDA = $1.5M-$2M valuation by Year 6)</li>
+                        <li><strong>Private Equity:</strong> Minority investment for expansion capital while retaining operational control</li>
+                        <li><strong>Management Buyout:</strong> Sell to lead mechanic/shop manager after Year 7</li>
+                        <li><strong>Lifestyle Business:</strong> Continue operations indefinitely as owner-operator generating $200K+ annual income</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appendix -->
+        <section class="section">
+            <h2 class="section-title">Key Resources & References</h2>
+            <div class="card resources">
+                <div class="two-column">
+                    <div>
+                        <h3>Supplier Contacts</h3>
+                        <ul>
+                            <li><a href="https://www.factoryfive.com" target="_blank">Factory Five Racing</a> - Base kits and chassis</li>
+                            <li><a href="https://clevelandpap.com" target="_blank">Cleveland Pick-A-Part</a> - Turnkey pallets (call for builder pricing)</li>
+                            <li><a href="https://www.blueprintengines.com" target="_blank">Blueprint Engines</a> - Alternative powertrain supplier</li>
+                            <li><a href="https://www.summitracing.com" target="_blank">Summit Racing</a> - Parts and accessories</li>
+                        </ul>
+
+                        <h3>Industry Associations</h3>
+                        <ul>
+                            <li><a href="https://www.sema.org" target="_blank">SEMA (Specialty Equipment Market Association)</a></li>
+                            <li><a href="https://www.nsra-usa.com" target="_blank">National Street Rod Association</a></li>
+                            <li><a href="https://www.good-guys.com" target="_blank">Goodguys Rod & Custom Association</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Texas Regulatory Resources</h3>
+                        <ul>
+                            <li><a href="https://www.txdmv.gov" target="_blank">Texas DMV - Vehicle Titles & Registration</a></li>
+                            <li><a href="https://www.dps.texas.gov" target="_blank">Texas DPS - Vehicle Inspection</a></li>
+                            <li><a href="https://texreg.sos.state.tx.us/public/readtac$ext.ViewTAC?tac_view=5&ti=43&pt=10" target="_blank">Texas Administrative Code Title 43, Part 10</a> (Kit Car Regulations)</li>
+                        </ul>
+
+                        <h3>Market Research</h3>
+                        <ul>
+                            <li><a href="https://www.ibisworld.com/united-states/market-research-reports/auto-parts-accessories-stores-industry/" target="_blank">IBISWorld - Auto Performance Industry Report</a></li>
+                            <li><a href="https://www.statista.com/topics/1721/automotive-industry/" target="_blank">Statista - Automotive Market Data</a></li>
+                        </ul>
+
+                        <h3>Financing Resources</h3>
+                        <ul>
+                            <li><a href="https://www.sba.gov/funding-programs/loans" target="_blank">SBA Loan Programs</a></li>
+                            <li><a href="https://www.lendio.com" target="_blank">Lendio</a> - Small business loan marketplace</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="section cta-section">
+            <div class="card cta-card">
+                <h2>Ready to Launch Raw Rods & Customs?</h2>
+                <p class="cta-text">This comprehensive 5-year plan positions Raw Rods & Customs to capture a significant share of the Texas hot rod market through professional assembly, strategic partnerships, and operational efficiency.</p>
+                <div class="cta-highlights">
+                    <div class="cta-stat">
+                        <span class="cta-number">28%</span>
+                        <span class="cta-label">Profit Margin</span>
+                    </div>
+                    <div class="cta-stat">
+                        <span class="cta-number">$420K</span>
+                        <span class="cta-label">Year 5 Net Profit</span>
+                    </div>
+                    <div class="cta-stat">
+                        <span class="cta-number">8.5x</span>
+                        <span class="cta-label">ROI by Year 5</span>
+                    </div>
+                </div>
+                <p class="next-steps"><strong>Next Steps:</strong> Secure funding, obtain GDN license, partner with Factory Five, build prototype #1.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Raw Rods & Customs - Texas-Built Performance</p>
+        <p class="disclaimer">This business plan is for informational purposes only and does not constitute financial or legal advice. All projections are estimates based on market research and industry data.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

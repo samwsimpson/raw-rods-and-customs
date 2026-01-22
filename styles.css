@@ -1,0 +1,909 @@
+/* ========================================
+   RAW RODS & CUSTOMS - BUSINESS PLAN STYLES
+   Hot Rod Theme: Red, Black, Chrome, Industrial
+   ======================================== */
+
+:root {
+    --primary-red: #c41e3a;
+    --dark-red: #8b0000;
+    --hot-orange: #ff4500;
+    --chrome-silver: #c0c0c0;
+    --dark-gray: #1a1a1a;
+    --medium-gray: #2d2d2d;
+    --light-gray: #404040;
+    --white: #ffffff;
+    --off-white: #f5f5f5;
+    --gold: #ffd700;
+    --shadow: rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background: linear-gradient(135deg, var(--dark-gray) 0%, var(--medium-gray) 100%);
+    color: var(--off-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23000" width="1200" height="600"/><path fill="%23c41e3a" opacity="0.1" d="M0 300 Q300 200 600 300 T1200 300 L1200 600 L0 600 Z"/></svg>');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid var(--primary-red);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(196, 30, 58, 0.03) 2px,
+        rgba(196, 30, 58, 0.03) 4px
+    );
+    pointer-events: none;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+    padding: 2rem;
+}
+
+.logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 6rem;
+    font-weight: 700;
+    letter-spacing: 8px;
+    background: linear-gradient(135deg, var(--chrome-silver), var(--white), var(--chrome-silver));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 
+        0 0 30px rgba(196, 30, 58, 0.5),
+        0 0 60px rgba(196, 30, 58, 0.3);
+    margin-bottom: 1rem;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 10px rgba(196, 30, 58, 0.5));
+    }
+    to {
+        filter: drop-shadow(0 0 25px rgba(196, 30, 58, 0.8));
+    }
+}
+
+.tagline {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--chrome-silver);
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: rgba(196, 30, 58, 0.1);
+    border: 2px solid var(--primary-red);
+    border-radius: 10px;
+    min-width: 200px;
+    transition: all 0.3s ease;
+}
+
+.stat:hover {
+    transform: translateY(-10px);
+    background: rgba(196, 30, 58, 0.2);
+    box-shadow: 0 10px 40px rgba(196, 30, 58, 0.4);
+}
+
+.stat-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    color: var(--primary-red);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--chrome-silver);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ========================================
+   CONTAINER & SECTIONS
+   ======================================== */
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.section {
+    margin-bottom: 6rem;
+}
+
+.section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    color: var(--primary-red);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-red), var(--hot-orange));
+}
+
+/* ========================================
+   CARDS & CONTENT
+   ======================================== */
+
+.card {
+    background: var(--medium-gray);
+    border: 1px solid var(--light-gray);
+    border-left: 5px solid var(--primary-red);
+    border-radius: 8px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 30px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(196, 30, 58, 0.3);
+    border-left-width: 8px;
+}
+
+.card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--chrome-silver);
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.card h4 {
+    font-size: 1.3rem;
+    color: var(--primary-red);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.lead-text {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--off-white);
+    margin-bottom: 2rem;
+}
+
+/* ========================================
+   HIGHLIGHT BOXES
+   ======================================== */
+
+.highlight-box {
+    background: linear-gradient(135deg, var(--dark-red), var(--primary-red));
+    border-radius: 8px;
+    padding: 2rem;
+    margin-top: 2rem;
+    border: 2px solid var(--hot-orange);
+}
+
+.highlight-box h3 {
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.highlight-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.highlight-box li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.highlight-box li:last-child {
+    border-bottom: none;
+}
+
+.highlight-box strong {
+    color: var(--gold);
+}
+
+/* ========================================
+   TWO COLUMN LAYOUT
+   ======================================== */
+
+.two-column {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   TABLES
+   ======================================== */
+
+.economics-table table,
+.simple-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+.economics-table th,
+.economics-table td,
+.simple-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.economics-table th {
+    background: var(--dark-gray);
+    color: var(--primary-red);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.95rem;
+}
+
+.economics-table tbody tr:hover,
+.simple-table tr:hover {
+    background: rgba(196, 30, 58, 0.1);
+}
+
+.total-row {
+    background: var(--light-gray) !important;
+    font-weight: 600;
+    border-top: 2px solid var(--primary-red);
+}
+
+.revenue-row {
+    background: rgba(255, 215, 0, 0.1) !important;
+    color: var(--gold);
+}
+
+.profit-row {
+    background: rgba(50, 205, 50, 0.1) !important;
+    color: #32cd32;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.simple-table strong {
+    color: var(--primary-red);
+}
+
+/* ========================================
+   CHARTS
+   ======================================== */
+
+.chart-container {
+    position: relative;
+    height: 400px;
+    margin: 2rem 0;
+    padding: 2rem;
+    background: var(--dark-gray);
+    border-radius: 8px;
+    border: 1px solid var(--light-gray);
+}
+
+/* ========================================
+   REVENUE STREAMS
+   ======================================== */
+
+.revenue-streams {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stream {
+    background: var(--dark-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--hot-orange);
+    transition: all 0.3s ease;
+}
+
+.stream:hover {
+    transform: translateX(10px);
+    border-left-width: 8px;
+}
+
+.stream h4 {
+    color: var(--hot-orange);
+    margin-bottom: 0.75rem;
+}
+
+/* ========================================
+   YEAR CARDS
+   ======================================== */
+
+.year-cards {
+    display: grid;
+    gap: 2rem;
+}
+
+.year-card {
+    background: linear-gradient(135deg, var(--medium-gray), var(--dark-gray));
+    border: 2px solid var(--primary-red);
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.year-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-red), var(--hot-orange), var(--gold));
+}
+
+.year-card h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--primary-red);
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.year-stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: var(--dark-gray);
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+
+.year-stats div {
+    text-align: center;
+}
+
+.year-stats strong {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--chrome-silver);
+    margin-bottom: 0.25rem;
+}
+
+.year-stats div:nth-child(1) {
+    color: var(--hot-orange);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.year-stats div:nth-child(2) {
+    color: var(--gold);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.year-stats div:nth-child(3) {
+    color: #32cd32;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.year-card ul {
+    list-style-position: inside;
+    margin: 1rem 0;
+}
+
+.year-card li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ========================================
+   RISK MANAGEMENT
+   ======================================== */
+
+.risk-card,
+.warranty-card {
+    background: var(--medium-gray);
+    border-radius: 8px;
+    padding: 2rem;
+    border-left: 5px solid var(--hot-orange);
+}
+
+.warranty-card {
+    border-left-color: #32cd32;
+}
+
+.risk-item,
+.warranty-item {
+    background: var(--dark-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--light-gray);
+}
+
+.risk-item h4 {
+    color: var(--hot-orange);
+    margin-bottom: 0.75rem;
+}
+
+.warranty-item h4 {
+    color: #32cd32;
+    margin-bottom: 0.75rem;
+}
+
+.note {
+    background: rgba(255, 215, 0, 0.1);
+    border-left: 4px solid var(--gold);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    font-style: italic;
+}
+
+/* ========================================
+   PARTNERSHIPS & MARKETING
+   ======================================== */
+
+.partnership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.partnership {
+    background: var(--dark-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--primary-red);
+    transition: all 0.3s ease;
+}
+
+.partnership:hover {
+    transform: scale(1.05);
+    border-color: var(--hot-orange);
+    box-shadow: 0 5px 20px rgba(196, 30, 58, 0.3);
+}
+
+.partnership h4 {
+    color: var(--primary-red);
+    margin-bottom: 0.75rem;
+}
+
+/* ========================================
+   SALES FUNNEL
+   ======================================== */
+
+.funnel {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.funnel-stage {
+    background: linear-gradient(90deg, var(--dark-gray), var(--medium-gray));
+    padding: 1.5rem;
+    border-left: 5px solid var(--primary-red);
+    border-radius: 8px;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.funnel-stage:nth-child(1) { border-left-color: var(--primary-red); }
+.funnel-stage:nth-child(2) { border-left-color: var(--hot-orange); margin-left: 2rem; }
+.funnel-stage:nth-child(3) { border-left-color: var(--gold); margin-left: 4rem; }
+.funnel-stage:nth-child(4) { border-left-color: #32cd32; margin-left: 6rem; }
+
+.funnel-stage h4 {
+    color: var(--chrome-silver);
+    margin-bottom: 0.5rem;
+}
+
+/* ========================================
+   ORGANIZATIONAL CHART
+   ======================================== */
+
+.org-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+    align-items: center;
+}
+
+.org-level {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.org-box {
+    background: var(--dark-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    min-width: 200px;
+    text-align: center;
+    border: 2px solid var(--chrome-silver);
+    position: relative;
+}
+
+.org-box.owner {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, var(--dark-red), var(--medium-gray));
+}
+
+.org-box.manager {
+    border-color: var(--primary-red);
+}
+
+.org-box.mechanic {
+    border-color: var(--hot-orange);
+}
+
+.org-box.admin {
+    border-color: var(--chrome-silver);
+}
+
+.org-box strong {
+    display: block;
+    color: var(--primary-red);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.org-box.owner strong {
+    color: var(--gold);
+}
+
+/* ========================================
+   STARTUP CAPITAL
+   ======================================== */
+
+.total-investment {
+    background: linear-gradient(135deg, var(--dark-red), var(--primary-red));
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 2rem;
+    border: 2px solid var(--gold);
+}
+
+.total-investment h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.total-investment .highlight {
+    font-size: 1.5rem;
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.funding-options {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.funding-option {
+    background: var(--dark-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--hot-orange);
+}
+
+.funding-option h4 {
+    color: var(--hot-orange);
+    margin-bottom: 1rem;
+}
+
+/* ========================================
+   RESOURCES & LINKS
+   ======================================== */
+
+.resources a {
+    color: var(--hot-orange);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.resources a:hover {
+    color: var(--gold);
+    text-decoration: underline;
+}
+
+.resources ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.resources li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ========================================
+   CTA SECTION
+   ======================================== */
+
+.cta-section {
+    margin-top: 4rem;
+}
+
+.cta-card {
+    background: linear-gradient(135deg, var(--dark-red), var(--primary-red));
+    border: 3px solid var(--gold);
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.cta-card h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    letter-spacing: 3px;
+}
+
+.cta-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.cta-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+
+.cta-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    color: var(--gold);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.cta-label {
+    font-size: 1.1rem;
+    color: var(--chrome-silver);
+    text-transform: uppercase;
+}
+
+.next-steps {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    background: var(--dark-gray);
+    border-top: 3px solid var(--primary-red);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+.disclaimer {
+    font-size: 0.9rem;
+    color: var(--chrome-silver);
+    font-style: italic;
+    max-width: 800px;
+    margin: 1rem auto;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.market-data {
+    background: rgba(196, 30, 58, 0.1);
+    padding: 1rem;
+    border-left: 4px solid var(--primary-red);
+    margin: 1rem 0;
+    font-weight: 600;
+}
+
+.competitive-edge {
+    background: rgba(255, 215, 0, 0.1);
+    padding: 1rem;
+    border-left: 4px solid var(--gold);
+    margin: 1rem 0;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 3.5rem;
+        letter-spacing: 4px;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .hero-stats {
+        gap: 2rem;
+    }
+
+    .stat {
+        min-width: 150px;
+        padding: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        padding: 2rem 1rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-container {
+        height: 300px;
+        padding: 1rem;
+    }
+
+    .year-stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .cta-highlights {
+        gap: 2rem;
+    }
+
+    .cta-number {
+        font-size: 3rem;
+    }
+
+    .funnel-stage:nth-child(2) { margin-left: 1rem; }
+    .funnel-stage:nth-child(3) { margin-left: 2rem; }
+    .funnel-stage:nth-child(4) { margin-left: 3rem; }
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+
+    .hero {
+        height: auto;
+        padding: 2rem;
+        page-break-after: always;
+    }
+
+    .card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        page-break-inside: avoid;
+    }
+
+    .chart-container {
+        page-break-inside: avoid;
+    }
+}

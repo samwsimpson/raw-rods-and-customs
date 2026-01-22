@@ -1,0 +1,28 @@
+# Ignore node modules if using any build tools in future
+node_modules/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore log files
+*.log
+npm-debug.log*
+
+# Ignore environment variables
+.env
+.env.local
+
+# Ignore build outputs (if adding build process)
+dist/
+build/
+
+# Ignore temporary files
+*.tmp
+*.temp
